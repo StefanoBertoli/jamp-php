@@ -334,7 +334,7 @@ class mysqliDs extends iDS
 						switch($dsobj->ds->property["fetch"])
 						{
 							case "object":
-								$dsforeignkeyvalue = @$dsobj->ds->property["row"]->$key[$k];
+								$dsforeignkeyvalue = $dsobj->ds->property["row"]->{$key[$k]};
 							break;
 							case "row":
 							case "assoc":
