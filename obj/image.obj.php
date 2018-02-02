@@ -132,7 +132,7 @@ class ClsObj_image extends ClsObject {
  		if ($this->property["readonly"]["value"]!="true") 
  		{
 			$size = str_ireplace("[[:alpha:]]", "", $this->property["width"]["value"]);
-			$size = intval($size / 10);
+			$size = intval((float)$size / 10);
  			$size = ($size < 10) ? 5 : $size;
  			$code .= "$tab\t<input id=\"".$id."_file\" class=\"".$this->property["class"]["value"]."\" type=\"file\" name=\"uploadfile\"  size=\"".$size."\">\n";
  			$code .= "$tab\t<div id=\"".$id."_add\"><div></div></div>";
