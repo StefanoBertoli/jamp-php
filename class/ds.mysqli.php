@@ -636,7 +636,7 @@ class mysqliDs extends iDS
 	public function dsMoveRow($row)
 	{
 		if (empty($this->property["result"])) return;
-		if (mysql_num_rows($this->property["result"]) == 0) return false;
+		if (mysqli_num_rows($this->property["result"]) == 0) return false;
 		$this->property["result"]->data_seek($row) or ClsError::showError("DS004");
 	}
 
